@@ -22,11 +22,11 @@ wordcloud = WordCloud(width = 800, height = 800,
                       stopwords = set(['s']),  # Any stopwords you'd like to exclude
                       min_font_size = 10).generate(feature_text)
 
-plt.figure(figsize = (8, 8), facecolor = None)
+fig=plt.figure(figsize = (8, 8), facecolor = None)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.tight_layout(pad = 0)
-st.pyplot()
+st.pyplot(fig)
 
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
